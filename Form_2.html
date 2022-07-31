@@ -1,0 +1,142 @@
+<html>
+<head><title>Form</title></head>
+<style></style>
+<body>
+<br><br><br>
+<fieldset>
+<form>
+<table>
+<h1>Submit Your Resume</h1>
+<tr><td>
+<fieldset>
+<legend>Personal Details</legend>
+First Name&ensp;&ensp;: <input type="text" name="First Name" placeholder="Enter your First Name"><br><br>
+Middle Name:<input type="text" name="Middle Name" placeholder="Enter your Middle Name"><br><br>
+Last Name&ensp;&ensp;:<input type="text" name="last Name" placeholder="Enter your Last Name"><br><br>
+Date of Birth:<input type="date" name="date"><br><br>
+Age in Years:<input type="number" value="age" min="18" max="30"><br><br>
+Gender&ensp;&ensp;:<input type="radio" name="Gender" value="Male">Male &emsp;&emsp;
+<input type="radio" name="Gender" value="Female">Female
+</fieldset></tr></td></table>
+<label for="file"></label>
+<progress id="file" value="20" max="100"> 20% out of 100 </progress>
+<table><tr><td><fieldset>
+<legend>Address Details</legend>
+<br>
+Address&emsp;:<input type="text" style="height: 50px;"><br><br>
+City/Town: <input type="text" name="city"><br><br>
+State&emsp;&emsp;: <input type="text" name="state"><br><br>
+Zip Code&ensp;: <input type="text" name="zip" pattern ="[0-9]{6}" placeholder="Enter six digits">
+</fieldset></td></tr></table>
+<progress id="file" value="40" max="100"> 40% out of 100 </progress>
+
+<table><tr><td><fieldset>
+                                <legend>Contact Information</legend>
+                                <br>
+                                Telephone: <input type="text" name="tele"><br><br>
+                                *Mobile&ensp;: <input type="text" name="mob"><br><br>
+                                *Email&ensp;: <input type="text" name="email"><br><br>
+                                Website: <input type="text" name="website"><br><br>
+                            </fieldset>				<progress id="file" value="60" max="100"> 60% out of 100 </progress>
+                    </td>
+                </tr>
+                    <table border="1">
+					<fieldset><legend>Educational Details</legend>
+                            <form action="one.htmlp">
+                                <th>Qualification</th>
+                                <th>Board/Universiy</th>
+                                <th>Country</th>
+                                <th>Starting Year</th>
+                                <th>Ending Year</th>
+                                <th>Percentage</th>
+                            </form>
+                       <tr>
+                            <form action="one.htmlp">
+                               <td><input type="checkbox" name="10th"> 10th</td>
+                                <td><input type="text" name="qwe" placeholder="Board/University"> </td>
+                                <td>
+                                    <select name="country">
+                                        <option value="" hidden>Choose</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Karnadaka">Karnadaka</option>
+                                        <option value="Delhi">Delhi</option> 
+                                    </select>
+                                </td>
+                                <td><input type="date" name="sdate"></td>
+                                <td><input type="date" name="edate"></td>
+                                <td><input type="number" name="percentage" min="00" max="100"></td>
+                            </form>
+                        </tr>
+                        <tr>
+                            <form action="one.htmlp">
+                                <td><input type="checkbox" name="10th"> 12th</td>
+                                <td><input type="text" name="qwe" placeholder="Board/University"> </td>
+                                <td>
+                                    <select name="country">
+                                        <option value="" hidden>Choose</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Karnadaka">Karnadaka</option>
+                                        <option value="Delhi">Delhi</option> 
+                                    </select>
+                                </td>
+                                <td><input type="date" name="sdate"></td>
+                                <td><input type="date" name="edate"></td>
+                                <td><input type="number" name="percentage" min="00" max="100"></td>
+                            </form>
+                        </tr>
+                        <tr>
+                            <form action="one.htmlp">
+                                <td><input type="checkbox" name="10th">B.Tech</td>
+                                <td><input type="text" name="qwe" placeholder="Board/University"> </td>
+                                <td>
+                                    <select name="country">
+                                        <option value="" hidden>Choose</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Karnadaka">Karnadaka</option>
+                                        <option value="Delhi">Delhi</option>  
+                                    </select>
+                                </td>
+                                <td><input type="date" name="sdate"></td>
+                                <td><input type="date" name="edate"></td>
+                                <td><input type="number" name="percentage" min="00" max="100"></td>
+                            </form>
+                        </tr>
+                        <tr>
+                            <form action="one.htmlp">
+                                <td><input type="checkbox" name="10th">M.Tech</td>
+                                <td><input type="text" name="qwe" placeholder="Board/University"> </td>
+                                <td>
+                                    <select name="country">
+                                        <option value="" hidden>Choose</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Karnadaka">Karnadaka</option>
+                                        <option value="Delhi">Delhi</option> 
+                                    </select>
+                                </td>
+                                <td><input type="date" name="sdate"></td>
+                                <td><input type="date" name="edate"></td>
+                                <td><input type="number" name="percentage" min="00" max="100"></td>
+                            </form>
+                        </tr>
+                    </table>
+                </tr>
+                <tr></fieldset>
+                    <fieldset>
+                        Attach your resume in .doc or .pdf format:<br><br>
+                        <input type="File"><br><br>
+                        <input type="checkbox" name="file"> I filled all the details
+                    </fieldset>
+                </tr>
+                <tr>
+                    <h3 align="center"><input type="submit" value="Submit"></h3>
+                    <h3 align="center"><input type="reset" value="clear"></h3>
+                </tr>
+                    </table></table>
+</form>
+</fieldset>
+</body>
+</html>
