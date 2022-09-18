@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercise 6 Clock</title>
+<script src="sct.js"></script>
+<script> 
+
+setInterval(
+function() {
+    var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    document.body.style.backgroundColor = "#" + randomColor;
+  }, 9000);
+  
+  function change(lnk,evt)
+            {
+                if(evt.type == "mouseover")
+                {
+                    lnk.style.color = "white";
+                    lnk.style.fontSize = "28px";
+                }
+                else if(evt.type == "mouseout")
+                {
+                    lnk.style.color = "blue";
+                    lnk.style.fontSize = "20px";
+                }
+            }
+ function changeImg(img,evt)
+            {
+                if(evt.type == "mouseover")
+                {
+                    img.style.height = "40px";
+                    img.style.width = "30px";
+                }
+                else if(evt.type == "mouseout")
+                {
+                    img.style.height = "30px";
+                    img.style.width = "20px";
+                }
+            }
+  
+  function Student_arr()
+{
+var Student = [{name : 'Gilja', r_num : 'URK20CO2003', dob : '11-Oct-1998'},{name : 'Benston',r_num : 'URK20CS2043',dob : '01-jun-2002'},{name : 'Sugu',r_num : 'URK20CS2053',dob : '08-nov-2002'}];
+let text_before = " "
+let text_after = " "
+for(var i =0; i<Student.length;i++)
+{
+let nam = Student[i].name;
+let reg = Student[i].r_num;
+let d_o_b = Student[i].dob;
+dob_slice = d_o_b.slice(7,11);
+year = parseInt(dob_slice);
+if(year < 2000)
+{
+text_before +=nam + "'s Register Number is " + reg+"<br>";
+}
+else if (year > 2000)
+{
+text_after +=nam + "'s Register Number is " + reg+"<br>";
+}
+}
+document.getElementById('out_before').innerHTML ="<b><u>Student have date of birth before 2000</u></b><br>"+ text_before;
+document.getElementById('out_after').innerHTML ="<br><b><u>Student have date of birth after 2000</u></b><br>"+ text_after;
+}
+  
+</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>;
+    <script>
+        $(document).ready(function(){
+             $(document).keydown(function(event){
+                  event.preventDefault();
+                  let key = event.which;  //37-left,38-up,39-right,40-down
+                  let car = $('#car');
+                  switch(key){
+                      case 37:
+                              car.css('transform','rotateY(180deg)')
+                              car.animate({left:'-=5px'},1)
+                              break;
+                      case 38:
+                              car.css('transform','rotate(270deg)')
+                              car.animate({top:'-=5px'},1)
+                              break;
+                      case 39:
+                              car.css('transform','rotate(0deg)')
+                              car.animate({left:'+=5px'},1)
+                              break;
+                      case 40:
+                              car.css('transform','rotate(90deg)')
+                              car.animate({top:'+=5px'},1)
+                              break;
+                  }
+             })
+        })
+    </script>
+
+
+<link rel="stylesheet" href="clock.css">
+</head>
+<body onload="Student_arr()">
+<div id="clock">12:00:00</div><br><br><br>
+<hr>
+<br><br><br>
+				<asp:LinkButton ID="LinkButton1" runat="server" Font-Size ="20" onmouseover="change(this,event);" onmouseout="change(this,event);"><p>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</p></asp:LinkButton>
+                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl ="~/images/1.JPG" onmouseover="changeImg(this,event);" onmouseout="changeImg(this,event);" />
+<br><br><hr>
+<div id="car" style="position:absolute;left:5px;top:20px; width:80px;height: 40px;">
+        <img src="Carr.png" width="120" height="80">
+     </div>
+
+<br><br>
+<h1>Student details</h1>
+<div id="out_before"></div>
+<div id="out_after"></div>
+
+</body></html>
