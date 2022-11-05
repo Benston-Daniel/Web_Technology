@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-form .bee-form-row .bee-field button {
+			font-size: inherit;
+			font-family: inherit
+		}
+
+		.bee-button .content,
+		.bee-icon .bee-icon-label-bottom,
+		.bee-row-5 .bee-col-1 .bee-block-2,
+		.bee-row-5 .bee-col-2 .bee-block-2,
+		.bee-row-5 .bee-col-3 .bee-block-2,
+		.bee-row-5 .bee-col-4 .bee-block-2,
+		.bee-row-5 .bee-col-5 .bee-block-2,
+		.bee-row-5 .bee-col-6 .bee-block-2 {
+			text-align: center
+		}
+
+		.bee-row-17,
+		.bee-row-17 .bee-row-content {
+			background-size: auto;
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: transparent;
+			color: #000;
+			font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3 a,
+		.bee-row-13 .bee-col-2 .bee-block-3 a,
+		.bee-row-14 .bee-col-1 .bee-block-3 a,
+		.bee-row-14 .bee-col-2 .bee-block-3 a,
+		.bee-row-15 .bee-col-1 .bee-block-3 a,
+		.bee-row-15 .bee-col-2 .bee-block-3 a,
+		.bee-row-3 .bee-col-1 .bee-block-2 a,
+		.bee-row-3 .bee-col-1 .bee-block-3 a,
+		.bee-row-7 .bee-col-2 .bee-block-1 a,
+		.bee-row-7 .bee-col-2 .bee-block-3 a,
+		a {
+			color: #b97100
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		h2,
+		p {
+			margin: 0
+		}
+
+		.bee-menu .bee-hamburger-trigger {
+			display: none
+		}
+
+		.bee-row-content {
+			max-width: 1280px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content.reverse,
+		.bee-row-content.reverse .bee-col {
+			-moz-transform: scale(1, -1);
+			-webkit-transform: scale(1, -1);
+			-o-transform: scale(1, -1);
+			-ms-transform: scale(1, -1);
+			transform: scale(1, -1)
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 17%
+		}
+
+		.bee-row-content .bee-col-w3 {
+			flex-basis: 25%
+		}
+
+		.bee-row-content .bee-col-w5 {
+			flex-basis: 42%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w7 {
+			flex-basis: 58%
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 div.label:not(.inline),
+		.bee-row-17 .bee-col-2 .bee-block-2 label:not(.inline),
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-bottom a,
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1,
+		.bee-row-17 .bee-col-2 .bee-block-2 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.bee-row-3 .bee-col-2 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-1 .bee-block-1,
+		.bee-row-9 .bee-col-2 .bee-block-1,
+		.bee-row-9 .bee-col-3 .bee-block-1,
+		.bee-row-9 .bee-col-4 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field.bee-inline-field {
+			flex-wrap: nowrap;
+			align-items: flex-start
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
+			margin-left: 15px
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-list ul,
+		.bee-menu ul {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu .bee-hamburger-controls {
+			cursor: pointer;
+			display: inline-block;
+			position: relative
+		}
+
+		.bee-menu .bee-hamburger-controls span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-size: 100%;
+			background-repeat: no-repeat;
+			transition: .12s ease-in-out
+		}
+
+		.bee-menu ul {
+			list-style-type: none
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-paragraph {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1,
+		.bee-row-2,
+		.bee-row-3 {
+			background-color: #fffaf2;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-10 .bee-row-content,
+		.bee-row-12 .bee-row-content,
+		.bee-row-16 .bee-row-content,
+		.bee-row-18 .bee-row-content,
+		.bee-row-19 .bee-row-content,
+		.bee-row-2 .bee-row-content,
+		.bee-row-20 .bee-row-content,
+		.bee-row-21 .bee-row-content,
+		.bee-row-3 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content,
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-1 .bee-col-1,
+		.bee-row-1 .bee-col-2 {
+			padding: 20px 30px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1,
+		.bee-row-20 .bee-col-1 .bee-block-1 {
+			color: #000;
+			font-family: inherit;
+			font-size: 14px;
+			text-align: left
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 {
+			color: #111;
+			font-family: inherit;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-align: right
+		}
+
+		.bee-row-12 .bee-col-1,
+		.bee-row-3 .bee-col-1,
+		.bee-row-3 .bee-col-3 {
+			padding: 60px 30px 40px
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-1,
+		.bee-row-3 .bee-col-1 .bee-block-1,
+		.bee-row-3 .bee-col-3 .bee-block-1,
+		.bee-row-7 .bee-col-2 .bee-block-2 {
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-3,
+		.bee-row-3 .bee-col-1 .bee-block-2 {
+			padding-top: 10px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3,
+		.bee-row-7 .bee-col-2 .bee-block-3 {
+			padding-top: 20px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-4,
+		.bee-row-7 .bee-col-2 .bee-block-5 {
+			padding-top: 25px;
+			text-align: left
+		}
+
+		.bee-row-3 .bee-col-3 .bee-block-2,
+		.bee-row-3 .bee-col-3 .bee-block-3,
+		.bee-row-3 .bee-col-3 .bee-block-4 {
+			padding-top: 25px;
+			text-align: center
+		}
+
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-16,
+		.bee-row-18,
+		.bee-row-22,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		.bee-row-4 .bee-col-1,
+		.bee-row-8 .bee-col-1 {
+			padding: 60px 30px 30px
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-1,
+		.bee-row-4 .bee-col-1 .bee-block-1,
+		.bee-row-8 .bee-col-1 .bee-block-1 {
+			padding-top: 20px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-22 .bee-col-1,
+		.bee-row-5 .bee-col-1,
+		.bee-row-5 .bee-col-2,
+		.bee-row-5 .bee-col-3,
+		.bee-row-5 .bee-col-4,
+		.bee-row-5 .bee-col-5,
+		.bee-row-5 .bee-col-6 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-5 .bee-col-2 .bee-block-1,
+		.bee-row-5 .bee-col-3 .bee-block-1,
+		.bee-row-5 .bee-col-4 .bee-block-1,
+		.bee-row-5 .bee-col-5 .bee-block-1,
+		.bee-row-5 .bee-col-6 .bee-block-1 {
+			padding-left: 10px;
+			padding-right: 10px;
+			width: 100%
+		}
+
+		.bee-row-7 .bee-col-1 {
+			padding-left: 30px;
+			padding-right: 30px
+		}
+
+		.bee-row-7 .bee-col-2 {
+			padding: 40px 30px
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-4 {
+			padding-top: 25px
+		}
+
+		.bee-row-9 .bee-col-1,
+		.bee-row-9 .bee-col-2,
+		.bee-row-9 .bee-col-3,
+		.bee-row-9 .bee-col-4 {
+			padding: 10px 30px
+		}
+
+		.bee-row-11 .bee-row-content {
+			background-color: #bc2a45;
+			background-repeat: no-repeat;
+			border-radius: 20px;
+			color: #000
+		}
+
+		.bee-row-11 .bee-col-1,
+		.bee-row-17 .bee-col-2 {
+			padding: 60px 30px
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-1 {
+			color: #000;
+			font-family: inherit;
+			font-size: 14px;
+			text-align: center
+		}
+
+		.bee-row-13 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content {
+			background-color: #fffaf2;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-13 .bee-col-1,
+		.bee-row-13 .bee-col-2,
+		.bee-row-14 .bee-col-1,
+		.bee-row-14 .bee-col-2,
+		.bee-row-15 .bee-col-1,
+		.bee-row-15 .bee-col-2 {
+			border-bottom: 5px solid #fff;
+			border-left: 5px solid #fff;
+			border-right: 5px solid #fff;
+			border-top: 5px solid #fff;
+			padding: 15px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1,
+		.bee-row-13 .bee-col-2 .bee-block-1,
+		.bee-row-14 .bee-col-1 .bee-block-1,
+		.bee-row-14 .bee-col-2 .bee-block-1,
+		.bee-row-15 .bee-col-1 .bee-block-1,
+		.bee-row-15 .bee-col-2 .bee-block-1 {
+			color: #111;
+			font-family: inherit;
+			font-size: 18px;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2,
+		.bee-row-13 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-15 .bee-col-1 .bee-block-2,
+		.bee-row-15 .bee-col-2 .bee-block-2 {
+			color: #000;
+			font-family: inherit;
+			font-size: 14px;
+			padding-top: 5px;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-2 .bee-block-3,
+		.bee-row-15 .bee-col-1 .bee-block-3,
+		.bee-row-15 .bee-col-2 .bee-block-3 {
+			padding-top: 5px
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2 {
+			color: #000;
+			font-family: inherit;
+			font-size: 14px;
+			padding-top: 10px;
+			text-align: left
+		}
+
+		.bee-row-17 .bee-row-content {
+			background-color: #fce4bb;
+			border-radius: 20px;
+			color: #000
+		}
+
+		@media (max-width:1300px) {
+
+			.bee-row-1 .bee-col-1,
+			.bee-row-1 .bee-col-2 {
+				padding: 20px 25px !important
+			}
+
+			.bee-row-12 .bee-col-1,
+			.bee-row-3 .bee-col-1 {
+				padding: 60px 25px 40px !important
+			}
+
+			.bee-row-3 .bee-col-3 {
+				padding: 60px 30px 40px 25px !important
+			}
+
+			.bee-row-4 .bee-col-1,
+			.bee-row-8 .bee-col-1 {
+				padding: 60px 25px 30px !important
+			}
+
+			.bee-row-7 .bee-col-1 {
+				padding: 0 25px !important
+			}
+
+			.bee-row-7 .bee-col-2 {
+				padding: 40px 25px !important
+			}
+
+			.bee-row-9 .bee-col-1,
+			.bee-row-9 .bee-col-2,
+			.bee-row-9 .bee-col-3,
+			.bee-row-9 .bee-col-4 {
+				padding: 10px 25px !important
+			}
+
+			.bee-row-11 .bee-col-1 {
+				padding: 60px 20px !important
+			}
+
+			.bee-row-17 .bee-col-2 {
+				padding: 60px 25px !important
+			}
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 {
+			font-family: inherit;
+			font-size: 18px;
+			padding-top: 40px;
+			text-align: left
+		}
+
+		.bee-row-19,
+		.bee-row-20,
+		.bee-row-21 {
+			background-color: #b97100;
+			background-repeat: no-repeat
+		}
+
+		.bee-row-20 .bee-col-1 {
+			padding: 25px 30px 30px
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-2 {
+			padding-bottom: 10px;
+			padding-top: 15px;
+			text-align: left
+		}
+
+		.bee-row-20 .bee-col-2,
+		.bee-row-20 .bee-col-3,
+		.bee-row-20 .bee-col-4 {
+			padding: 30px
+		}
+
+		.bee-row-20 .bee-col-2 .bee-block-1,
+		.bee-row-20 .bee-col-3 .bee-block-1,
+		.bee-row-20 .bee-col-4 .bee-block-1 {
+			color: #fff;
+			font-family: inherit;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-align: left
+		}
+
+		.bee-row-22 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-1 {
+			color: #9d9d9d;
+			font-family: inherit;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-2,
+		.bee-row-3 .bee-col-1 .bee-block-3 {
+			letter-spacing: 0;
+			text-align: left;
+			direction: ltr;
+			font-weight: 400;
+			line-height: 120%
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-3 {
+			color: #111;
+			font-size: 20px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-15 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-15 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-20 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-3 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-3 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-7 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-7 .bee-col-2 .bee-block-4 li:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-3 .bee-col-1 .bee-block-2 {
+			color: #b97100;
+			font-family: "Abril Fatface", Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 68px
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li {
+			padding: 5px 10px
+		}
+
+		.bee-row-1 .bee-col-2 .bee-block-1 li a {
+			color: #111
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-20 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-11 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-14 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-14 .bee-col-1 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-14 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-14 .bee-col-2 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-15 .bee-col-1 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-15 .bee-col-2 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-15 .bee-col-2 .bee-block-2 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-20 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content,
+		.bee-row-22 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-1 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-1 {
+			color: #393d47;
+			direction: ltr;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-3,
+		.bee-row-7 .bee-col-2 .bee-block-3,
+		.bee-row-7 .bee-col-2 .bee-block-4 {
+			direction: ltr;
+			font-weight: 400;
+			letter-spacing: 0;
+			text-align: left
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-1 p:not(:last-child) {
+			margin-bottom: 18px
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-3 {
+			color: #111;
+			font-size: 38px;
+			line-height: 120%
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-4 {
+			color: #111;
+			font-size: 16px;
+			line-height: 150%
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-4 ul {
+			list-style-type: revert;
+			list-style-position: inside
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-4 li ul {
+			margin-top: 16px
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-3 a,
+		.bee-row-7 .bee-col-2 .bee-block-4 li a {
+			color: #8a3b8f
+		}
+
+		.bee-row-7 .bee-col-2 .bee-block-4 li li {
+			margin-left: 30px
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-3,
+		.bee-row-13 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-2 .bee-block-3,
+		.bee-row-15 .bee-col-1 .bee-block-3,
+		.bee-row-15 .bee-col-2 .bee-block-3 {
+			color: #111;
+			direction: ltr;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-14 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-14 .bee-col-2 .bee-block-1 .bee-icon-image,
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon-image,
+		.bee-row-15 .bee-col-2 .bee-block-1 .bee-icon-image {
+			padding: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon-image,
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon-image,
+		.bee-row-14 .bee-col-1 .bee-block-2 .bee-icon-image,
+		.bee-row-14 .bee-col-2 .bee-block-2 .bee-icon-image,
+		.bee-row-15 .bee-col-1 .bee-block-2 .bee-icon-image,
+		.bee-row-15 .bee-col-2 .bee-block-2 .bee-icon-image {
+			padding: 5px 5px 5px 0
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-1 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-14 .bee-col-2 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-1 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-2 .bee-block-2 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-15 .bee-col-2 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-20 .bee-col-2 .bee-block-1 li,
+		.bee-row-20 .bee-col-3 .bee-block-1 li,
+		.bee-row-20 .bee-col-4 .bee-block-1 li {
+			padding: 5px 5px 15px
+		}
+
+		.bee-row-20 .bee-col-2 .bee-block-1 li a,
+		.bee-row-20 .bee-col-3 .bee-block-1 li a,
+		.bee-row-20 .bee-col-4 .bee-block-1 li a {
+			color: #fff
+		}
+
+		.bee-row-20 .bee-col-1 .bee-block-3 {
+			color: #fff;
+			font-size: 16px;
+			line-height: 120%
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 15px 10px
+		}
+
+		.bee-row-11 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-22 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 {
+			text-align: "left"
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 div.label,
+		.bee-row-17 .bee-col-2 .bee-block-2 label {
+			color: #111;
+			letter-spacing: normal;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 ::-webkit-input-placeholder {
+			color: #111
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 :-moz-placeholder {
+			color: #111
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 ::-moz-placeholder {
+			color: #111
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 :-ms-input-placeholder {
+			color: #111
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 .bee-field>label:first-child,
+		.bee-row-17 .bee-col-2 .bee-block-2 div.label {
+			padding: 3px
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 .bee-field.bee-inline-field input[type=checkbox] {
+			position: relative;
+			color: purple;
+			top: 9px
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #fff;
+			border-bottom: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-radius: 4px;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			color: #111;
+			padding: 10px;
+			min-height: 56px
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #b97100
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 button {
+			background-color: #bc2a45;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 10px;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #fff;
+			letter-spacing: normal;
+			line-height: 200%;
+			padding: 10px 20px;
+			width: auto
+		}
+
+		.bee-row-17 .bee-col-2 .bee-block-2 .bee-button-container {
+			padding-top: 10px;
+			text-align: "left"
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span {
+				display: none
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #b97100;
+				border-radius: 50%
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span,
+			.bee-row-20 .bee-col-2 .bee-block-1 .bee-hamburger-controls span,
+			.bee-row-20 .bee-col-3 .bee-block-1 .bee-hamburger-controls span,
+			.bee-row-20 .bee-col-4 .bee-block-1 .bee-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open,
+			.bee-row-20 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open,
+			.bee-row-20 .bee-col-3 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open,
+			.bee-row-20 .bee-col-4 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close,
+			.bee-row-20 .bee-col-2 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close,
+			.bee-row-20 .bee-col-3 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close,
+			.bee-row-20 .bee-col-4 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #b97100
+			}
+
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-1 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a,
+			.bee-row-20 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-20 .bee-col-2 .bee-block-1 ul.with-bee-hamburger li a,
+			.bee-row-20 .bee-col-3 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-20 .bee-col-3 .bee-block-1 ul.with-bee-hamburger li a,
+			.bee-row-20 .bee-col-4 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-20 .bee-col-4 .bee-block-1 ul.with-bee-hamburger li a {
+				color: #fff
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r0c1m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-20 .bee-col-2 .bee-block-1 .bee-hamburger-controls,
+			.bee-row-20 .bee-col-3 .bee-block-1 .bee-hamburger-controls,
+			.bee-row-20 .bee-col-4 .bee-block-1 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #000;
+				border-radius: 0
+			}
+
+			.bee-row-20 .bee-col-2 .bee-block-1 ul.with-bee-hamburger,
+			.bee-row-20 .bee-col-3 .bee-block-1 ul.with-bee-hamburger,
+			.bee-row-20 .bee-col-4 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #000
+			}
+
+			.bee-row-17 .bee-col-2 .bee-block-2 button,
+			.bee-row-17 .bee-col-2 .bee-block-2 input,
+			.bee-row-17 .bee-col-2 .bee-block-2 label {
+				font-size: 16px !important
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="bee-page-container">
+<div class="bee-row bee-row-1">
+<div class="bee-row-content no_stack">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/704cce46-9be6-4e8c-b182-1eceded4909e.png" width="auto"/></a></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-menu">
+<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r0c1m0" type="checkbox"/><label class="bee-hamburger-controls" for="bee-hamburger-memu-r0c1m0"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
+<ul class="bee-horizontal with-bee-hamburger">
+<li><a href="https://www.example.com/" target="_self" title="">BRANDS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">PRODUCTS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">SALE</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">ABOUT</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-2">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:40px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-3">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w3">
+<div class="bee-block bee-block-1 bee-heading">
+<h1 style="color:#111;direction:ltr;font-family:Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;font-size:24px;font-weight:400;letter-spacing:2px;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">SALE</span> </h1>
+</div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>10% off</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>For all purchase above ₹300</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 18px; background-color: #bc2a45; border-bottom: 1px solid #BC2A45; border-left: 1px solid #BC2A45; border-radius: 10px; border-right: 1px solid #BC2A45; border-top: 1px solid #BC2A45; color: #ffffff; direction: ltr; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 15px; padding-left: 30px; padding-right: 30px; padding-top: 15px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 18px; line-height: 200%; letter-spacing: 1px;">BUY NOW</span></a></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-image"><img alt="woman with headphones and instruments" class="bee-center bee-autowidth" src="images/labor-day-main__3___1_.png" style="max-width:640px;"/></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w3">
+<div class="bee-block bee-block-1 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Brands:</span> </h2>
+</div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: #fffaf2; border-bottom: 1px solid #B97100; border-left: 1px solid #B97100; border-radius: 10px; border-right: 1px solid #B97100; border-top: 1px solid #B97100; color: #b97100; direction: ltr; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 15px; padding-left: 10px; padding-right: 10px; padding-top: 15px; width: 100%; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">FENDER</span></a></div>
+<div class="bee-block bee-block-3 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: #fffaf2; border-bottom: 1px solid #B97100; border-left: 1px solid #B97100; border-radius: 10px; border-right: 1px solid #B97100; border-top: 1px solid #B97100; color: #b97100; direction: ltr; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 15px; padding-left: 10px; padding-right: 10px; padding-top: 15px; width: 100%; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">KORG</span></a></div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: #fffaf2; border-bottom: 1px solid #B97100; border-left: 1px solid #B97100; border-radius: 10px; border-right: 1px solid #B97100; border-top: 1px solid #B97100; color: #b97100; direction: ltr; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 15px; padding-left: 10px; padding-right: 10px; padding-top: 15px; width: 100%; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">LUDWIG</span></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-4">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Categories On Sale​</span> </h2>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-5">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="drums" class="bee-center bee-fixedwidth" src="images/drums.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">DRUMS</span></a></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="piano" class="bee-center bee-autowidth" src="images/piano.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">PIANOS</span></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="guitar" class="bee-center bee-autowidth" src="images/guitar.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">GUITARS</span></a></div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="horn" class="bee-center bee-autowidth" src="images/brass.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">BRASS</span></a></div>
+</div>
+<div class="bee-col bee-col-5 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="violin" class="bee-center bee-autowidth" src="images/strings.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">STRINGS</span></a></div>
+</div>
+<div class="bee-col bee-col-6 bee-col-w2">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="headphones" class="bee-center bee-autowidth" src="images/headphones.png" style="max-width:193px;"/></a></div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: transparent; border-bottom: 0px solid #8a3b8f; border-left: 0px solid #8a3b8f; border-radius: 4px; border-right: 0px solid #8a3b8f; border-top: 0px solid #8a3b8f; color: #111111; direction: ltr; font-weight: 400; letter-spacing: 0px; max-width: 100%; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; padding-top: 0px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: normal;">HEADPHONES</span></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-6">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:80px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-7">
+<div class="bee-row-content reverse">
+<div class="bee-col bee-col-1 bee-col-w5">
+<div class="bee-block bee-block-1 bee-image"><img alt="guitar" class="bee-center bee-autowidth" src="images/labor-day-guitar__1_.png" style="max-width:473px;"/></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w7">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>BEST CHOICE</p>
+</div>
+<div class="bee-block bee-block-2 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Acoustic Guitar D-230</span> </h2>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>₹24788</p>
+</div>
+<div class="bee-block bee-block-4 bee-list">
+<ul>
+<li>Two-year Standard warranty</li>
+<li>4% cashback.</li>
+<li>No cost EMI available.</li>
+<li>15 Day return</li>
+</ul>
+</div>
+<div class="bee-block bee-block-5 bee-button"><a class="bee-button-content" href="https://www.example.com/" style="font-family: inherit; font-size: 16px; background-color: #bc2a45; border-bottom: 1px solid #BC2A45; border-left: 1px solid #BC2A45; border-radius: 10px; border-right: 1px solid #BC2A45; border-top: 1px solid #BC2A45; color: #ffffff; direction: ltr; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 15px; padding-left: 30px; padding-right: 30px; padding-top: 15px; width: auto; display: inline-block;"><span dir="ltr" style="word-break: break-word; font-size: 16px; line-height: 200%; letter-spacing: 1px;">BUY NOW</span></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-8">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">See More Collections</span> </h2>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-9">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="guitars" class="bee-center bee-autowidth" src="images/guitars.png" style="max-width:260px;"/></a></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="piano" class="bee-center bee-autowidth" src="images/piano_1.png" style="max-width:260px;"/></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="drums" class="bee-center bee-autowidth" src="images/drums_1.png" style="max-width:260px;"/></a></div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><a href="https://www.example.com/"><img alt="violins" class="bee-center bee-autowidth" src="images/violins.png" style="max-width:260px;"/></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-10">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:80px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-11">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/sein-removebg-preview.png" width="auto"/></a></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/7d6dd044-0921-42e9-8d9d-0708086315ac.png" width="auto"/></a></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/5cab8645-0069-4675-a84a-040d01545e22.png" width="auto"/></a></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/roland-removebg-preview.png" width="auto"/></a></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/ccfa853a-89a8-406a-9a83-b0f95de58af4.png" width="auto"/></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-12">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">See What People Say About Us </span> </h2>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-13">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w5">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/Ellipse_6.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">Jane Doe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph"></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w7">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/Ellipse_1.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">John DOe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p><em>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie!</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-14">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w7">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/Ellipse_5.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">Jane Doe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p><em>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie!</em></p>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w5">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/Ellipse_4.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">Jane Doe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p><em>Lorem ipsum dolor sit amet hendrerit esse iriure dolor. </em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-15">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/benston.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">Jane Doe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p><em>Lorem ipsum dolor sit amet! Duis autem vel eum iriure :)</em></p>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-icon-image"><img alt="" height="64px" src="images/Ellipse_3.jpg" width="auto"/></div>
+<div class="bee-icon-label bee-icon-label-bottom">Jane Doe</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-icons">
+<div class="bee-icon bee-icon-first">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><img alt="" height="16px" src="images/Star_1__1_.png" width="auto"/></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p><em>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie!</em></p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-16">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:80px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-17">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w6">
+<div class="bee-block bee-block-1 bee-image"><img alt="" class="bee-autowidth" src="images/melody-148443_1__4_.png" style="max-width:640px;"/></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w6">
+<div class="bee-block bee-block-1 bee-heading">
+<h2 style="color:#b97100;direction:ltr;font-family:'Abril Fatface', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:38px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Sign Up Now & Get 10% Off</span> </h2>
+</div>
+<div class="bee-block bee-block-2 bee-form">
+<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
+<div class="bee-form-row">
+<div class="bee-field bee-field-r16c1m1i3"><input id="r16c1m1i3" name="email" placeholder="EMAIL" required="" type="email"/></div>
+</div>
+<div class="bee-form-row">
+<div class="bee-field bee-field-r16c1m1i10 bee-inline-field"><input id="r16c1m1i10" name="privacy_policy" type="checkbox"/><label class="inline" for="r16c1m1i10">I agree to the <a href="https://your_privacy_url">Privacy Policy</a></label></div>
+</div>
+<div class="bee-form-row">
+<div class="bee-field bee-field-r16c1m1i11">
+<div class="bee-button-container"><button id="r16c1m1i11" name="submit" type="submit" value="SIGN UP">SIGN UP</button></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-18">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:80px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-19">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:60px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-20">
+<div class="bee-row-content reverse">
+<div class="bee-col bee-col-1 bee-col-w3">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.example.com/" target="_self" title=""><img alt="" height="32px" src="images/f2d46032-2dd4-4262-9277-cd1a4bed8508.png" width="auto"/></a></div>
+</div>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-social">
+<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com/"><img alt="facebook" src="images/facebook2x.png" title="facebook"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.twitter.com/"><img alt="twitter" src="images/twitter2x.png" title="twitter"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com/"><img alt="linkedin" src="images/linkedin2x.png" title="linkedin"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com/"><img alt="instagram" src="images/instagram2x.png" title="instagram"/></a></span></div>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>2022 © All rights reserved</p>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w3">
+<div class="bee-block bee-block-1 bee-menu">
+<nav class="bee-menu">
+<ul class="bee-vertical">
+<li><a href="https://www.example.com/" target="_self" title="">ABOUT</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">NEWS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">PRODUCTS</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w3">
+<div class="bee-block bee-block-1 bee-menu">
+<nav class="bee-menu">
+<ul class="bee-vertical">
+<li><a href="https://www.example.com/" target="_self" title="">PRIVACY POLICY</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">TERMS & CONDITIONS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">CONTACT US</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w3">
+<div class="bee-block bee-block-1 bee-menu">
+<nav class="bee-menu">
+<ul class="bee-vertical">
+<li><a href="https://www.example.com/" target="_self" title="">CLIENTS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">PARTNERS</a></li>
+<li><a href="https://www.example.com/" target="_self" title="">WORK</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-21">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:60px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-22">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE"><img alt="Designed with BEE" height="32px" src="images/bee.png" width="auto"/></a></div>
+<div class="bee-icon-label bee-icon-label-right"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE">Designed with BEE</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
